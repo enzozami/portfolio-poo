@@ -20,16 +20,38 @@ public class Evento {
         this.apresentacoes = new ArrayList<>();
     }
 
-    public void confirmarApresentacao(){
-        // Lógica para confirmar a apresentação
+    public void confirmarApresentacao(ApresentacaoAvaliacao apresentacao){
+        apresentacao.setFoiApresentado(true);
     }
 
-    public String atribuirNota(){
-        // Lógica para atribuir nota
-        return "Nota atribuída com sucesso!";
+    public void adicionarApresentacao(ApresentacaoAvaliacao apresentacao) {
+        apresentacoes.add(apresentacao);
+    }
+
+    public String atribuirNota(ApresentacaoAvaliacao apresentacao, double nota){
+        if(!apresentacao.getFoiApresentado()){
+            return "Não é possível atribuir nota: '" + apresentacao.getTrabalhoPesquisa().getTitulo()
+                    + "' não foi apresentado.";
+        }
+        if(nota < 0 || nota > 10){
+            return "Nota inválida. A nota deve estar entre 0 e 10.";
+        }
+        apresentacao.setNota(nota);
+        return "Nota atribuída com sucesso.";
     }
 
     public String mostraDados(){
-        return "";
+        StringBuilder dados = new StringBuilder();
+        dados.append("ID: ").append(id).append("\n");
+        dados.append("Tipo: ").append(tipo).append("\n");
+        dados.append("Nome: ").append(nome).append("\n");
+        dados.append("Data: ").append(data).append("\n");
+        dados.append("Local: ").append(local).append("\n");
+        dados.append("Sala: ").append(sala).append("\n");
+        dados.append("Apresentações:\n");
+        for (ApresentacaoAvaliacao apresentacao : apresentacoes) {
+            dados.append(apresentacao.mostraDados()).append("\n");
+        }
+        return dados.toString();
     }
 }

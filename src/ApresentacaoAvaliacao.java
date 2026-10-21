@@ -16,6 +16,30 @@ public class ApresentacaoAvaliacao {
         this.avaliadores = new ArrayList<>();
     }
 
+    public void setFoiApresentado(boolean foiApresentado) {
+        this.foiApresentado = foiApresentado;
+    }
+
+    public boolean getFoiApresentado() {
+        return foiApresentado;
+    }
+
+    public TrabalhoPesquisa getTrabalhoPesquisa() {
+        return trabalhoPesquisa;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setAvaliadores(Avaliador avaliador){
+        this.avaliadores.add(avaliador);
+    }
+
     public String mostraDados() {
         StringBuilder dados = new StringBuilder();
 
