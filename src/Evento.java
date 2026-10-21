@@ -9,14 +9,16 @@ public class Evento {
     private String local;
     private String sala;
     private List<ApresentacaoAvaliacao> apresentacoes;
+    private Pessoa coordenador;
 
-    public Evento(int id, String tipo, String nome, String data, String local, String sala) {
+    public Evento(int id, String tipo, String nome, String data, String local, String sala, Pessoa coordenador) {
         this.id = id;
         this.tipo = tipo;
         this.nome = nome;
         this.data = data;
         this.local = local;
         this.sala = sala;
+        this.coordenador = coordenador;
         this.apresentacoes = new ArrayList<>();
     }
 
@@ -52,6 +54,7 @@ public class Evento {
         for (ApresentacaoAvaliacao apresentacao : apresentacoes) {
             dados.append(apresentacao.mostraDados()).append("\n");
         }
+        dados.append("Coordenador: ").append(coordenador.mostraDados()).append("\n");
         return dados.toString();
     }
 }

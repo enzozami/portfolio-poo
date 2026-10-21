@@ -1,6 +1,6 @@
 public class Aluno extends Pessoa{
-    public int ra;
-    public String curso;
+    private int ra;
+    private String curso;
 
     public Aluno(int id, String nome, int ra, String curso) {
         super(id, nome);

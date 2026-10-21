@@ -49,9 +49,9 @@ public class TesteControle {
 
         // Eventos
         Evento ev1 = new Evento(300, "Congresso", "Congresso de Tecnologia 2026",
-                "20/11/2026", "Campus Central", "Sala 101");
+                "20/11/2026", "Campus Central", "Sala 101", coord1);
         Evento ev2 = new Evento(301, "Seminário", "Seminário de Pesquisa Aplicada",
-                "05/12/2026", "Campus Norte", "Sala 202");
+                "05/12/2026", "Campus Norte", "Sala 202", coord2);
 
         ev1.adicionarApresentacao(ap1);
         ev1.adicionarApresentacao(ap2);

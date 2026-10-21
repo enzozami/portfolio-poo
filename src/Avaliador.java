@@ -7,4 +7,12 @@ public class Avaliador extends Pessoa{
         this.matricula = matricula;
         this.tituloAcademico = tituloAcademico;
     }
+
+    public int getMatricula() { return matricula; }
+    public String getTituloAcademico() { return tituloAcademico; }
+
+    @Override
+    public String mostraDados() {
+        return getMatricula() + " - " + getTituloAcademico() + " " + getNome();
+    }
 }
