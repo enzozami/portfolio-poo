@@ -35,11 +35,11 @@ public class TesteControle {
         t3.setParticipantes(a6);
 
         // Apresentações / Avaliações
-        ApresentacaoAvaliacao ap1 = new ApresentacaoAvaliacao(200, true, 9.0, t1);
+        ApresentacaoAvaliacao ap1 = new ApresentacaoAvaliacao(200, false, 0.0, t1);;
         ap1.setAvaliadores(av1);
         ap1.setAvaliadores(av2);
 
-        ApresentacaoAvaliacao ap2 = new ApresentacaoAvaliacao(201, true, 8.0, t2);
+        ApresentacaoAvaliacao ap2 = new ApresentacaoAvaliacao(201, false, 0.0, t2);
         ap2.setAvaliadores(av2);
         ap2.setAvaliadores(av3);
 
