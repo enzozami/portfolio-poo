@@ -8,15 +8,18 @@ public class Aluno extends Pessoa{
         this.curso = curso;
     }
 
-    public int getRa() {
-        return ra;
-    }
+    public int getRa() { return ra; }
+    public void setRa(int ra) { this.ra = ra; }
+    public String getCurso() { return curso; }
+    public void setCurso(String curso) { this.curso = curso; }
 
-    public String getCurso(){
-        return curso;
-    }
-
-    public String mostraDados(){
-        return getRa() + " - " + getNome() + " - " + getCurso();
+    /**
+     * Retorna os dados de Pessoa acrescidos do RA e do curso do aluno.
+     *
+     * @return texto com id, nome, RA e curso
+     */
+    @Override
+    public String mostraDados() {
+        return super.mostraDados() + " | RA: " + ra + " | Curso: " + curso;
     }
 }

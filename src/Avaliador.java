@@ -8,11 +8,26 @@ public class Avaliador extends Pessoa{
         this.tituloAcademico = tituloAcademico;
     }
 
-    public int getMatricula() { return matricula; }
-    public String getTituloAcademico() { return tituloAcademico; }
+    public int getMatricula() {
+        return matricula;
+    }
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+    public String getTituloAcademico() {
+        return tituloAcademico;
+    }
+    public void setTituloAcademico(String tituloAcademico) {
+        this.tituloAcademico = tituloAcademico;
+    }
 
+    /**
+     * Retorna os dados de Pessoa acrescidos da matrícula e do título acadêmico.
+     *
+     * @return texto com id, nome, matrícula e título
+     */
     @Override
     public String mostraDados() {
-        return getMatricula() + " - " + getTituloAcademico() + " " + getNome();
+        return super.mostraDados() + " | Matrícula: " + matricula + " | Título: " + tituloAcademico;
     }
 }

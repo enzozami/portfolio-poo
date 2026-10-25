@@ -35,15 +35,15 @@ public class TesteControle {
         t3.setParticipantes(a6);
 
         // Apresentações / Avaliações
-        ApresentacaoAvaliacao ap1 = new ApresentacaoAvaliacao(200, false, 0.0, t1);;
+        ApresentacaoAvaliacao ap1 = new ApresentacaoAvaliacao(200, t1);
         ap1.setAvaliadores(av1);
         ap1.setAvaliadores(av2);
 
-        ApresentacaoAvaliacao ap2 = new ApresentacaoAvaliacao(201, false, 0.0, t2);
+        ApresentacaoAvaliacao ap2 = new ApresentacaoAvaliacao(201, t2);
         ap2.setAvaliadores(av2);
         ap2.setAvaliadores(av3);
 
-        ApresentacaoAvaliacao ap3 = new ApresentacaoAvaliacao(202, false, 0.0, t3);
+        ApresentacaoAvaliacao ap3 = new ApresentacaoAvaliacao(202, t3);
         ap3.setAvaliadores(av3);
         ap3.setAvaliadores(av4);
 
@@ -60,7 +60,7 @@ public class TesteControle {
         // Confirmações e notas
         ev1.confirmarApresentacao(ap1);
         System.out.println(ev1.atribuirNota(ap1, 9.5));
-        System.out.println(ev1.atribuirNota(ap2, 8.0));   // ainda não apresentado -> recusa
+        System.out.println(ev1.atribuirNota(ap2, 8.0));
         ev1.confirmarApresentacao(ap2);
         System.out.println(ev1.atribuirNota(ap2, 8.0));
         ev2.confirmarApresentacao(ap3);

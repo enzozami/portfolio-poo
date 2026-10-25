@@ -14,30 +14,42 @@ public class TrabalhoPesquisa {
         this.participantes = new ArrayList<>();
     }
 
-    public String getTitulo(){
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getTitulo() {
         return titulo;
     }
-
-    public String getResumo(){
-        return resumo;
-    }
-
-    public void setTitulo(String titulo){
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
-    public void setResumo(String resumo){
+    public String getResumo() {
+        return resumo;
+    }
+    public void setResumo(String resumo) {
         this.resumo = resumo;
     }
-
-    public List<Aluno> getParticipantes(){
+    public List<Aluno> getParticipantes() {
         return participantes;
     }
 
+    /**
+     * Inclui um aluno na equipe do trabalho.
+     *
+     * @param aluno aluno a ser adicionado
+     */
     public void setParticipantes(Aluno aluno){
         this.participantes.add(aluno);
     }
 
+    /**
+     * Retorna o título, o resumo e os alunos que compõem a equipe.
+     *
+     * @return texto com os dados do trabalho
+     */
     public String mostraDados() {
         StringBuilder dados = new StringBuilder();
 

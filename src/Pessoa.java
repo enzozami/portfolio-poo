@@ -7,19 +7,26 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
-
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
-
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     * Retorna os dados básicos da pessoa (id e nome).
+     * As subclasses sobrescrevem este método para acrescentar seus próprios dados.
+     *
+     * @return texto com id e nome
+     */
     public String mostraDados(){
-        return nome;
+        return "ID: " + id + " | Nome: " + nome;
     }
 }
